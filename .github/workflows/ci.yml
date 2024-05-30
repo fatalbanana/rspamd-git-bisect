@@ -1,0 +1,16 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  bisect:
+    uses: ./.github/workflows/ci_bisect.yml
+    with:
+      image: ghcr.io/rspamd/rspamd-build-docker:ubuntu-ci
