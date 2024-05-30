@@ -41,5 +41,5 @@ jobs:
           cd ${GITHUB_WORKSPACE}/src
           git bisect start
           git bisect bad
-          git bisect good 3.8.1
+          git bisect good 126584384ea4d7e26289771b4d663e796f2f65f6
           git bisect run ${GITHUB_WORKSPACE}/self/build_and_test.sh
